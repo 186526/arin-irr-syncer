@@ -17,24 +17,56 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      ARIN_API_KEY: ${{ secrets.ARIN_API_KEY }}
+      ARIN_ORG: ${{ secrets.ARIN_ORG }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install system dependencies (bgpq4)
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y bgpq4
+
+      - name: Check ARIN_ORG && ARIN_API_KEY present
+        shell: bash
+        run: |
+          if [[ -z "${ARIN_ORG:-}" ]]; then
+            echo "ARIN_ORG missing"
+            exit 1
+          fi
+          if [[ -z "${ARIN_API_KEY:-}" ]]; then
+            echo "ARIN_API_KEY missing"
+            exit 1
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: yarn
+
+      - name: Enable Corepack (Yarn)
+        run: corepack enable
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Run src/index.ts
         env:
-          ARIN_API_Key: ${{ secrets.ARIN_API_Key }}
+          ARIN_API_KEY: ${{ secrets.ARIN_API_KEY }}
           ARIN_ORG: ${{ secrets.ARIN_ORG }}
-        run: npx --yes tsx ./src/index.ts
+        run: |
+          set -euo pipefail
+          if yarn dlx --help >/dev/null 2>&1; then
+            yarn dlx tsx ./src/index.ts
+          else
+            npx --yes tsx ./src/index.ts
+          fi
 
       - name: Commit and push sync/as-sets
         run: |

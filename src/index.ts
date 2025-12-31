@@ -3,7 +3,7 @@ import IRM from "./core/irm";
 import asSetFromYaml from "./helper/SimpleASSet";
 import fs from "fs";
 
-const irm = new IRM(process.env.ARIN_API_Key as string);
+const irm = new IRM(process.env.ARIN_API_KEY as string);
 
 console.log("Fetching AS-Set list...");
 
