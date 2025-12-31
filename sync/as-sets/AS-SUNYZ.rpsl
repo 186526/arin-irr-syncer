@@ -1,0 +1,10 @@
+as-set: AS-SUNYZ
+descr: A Sunoaki customer,
+descr: This AS-SET does not represent Sunoaki Network LLC. We reserve the right to revoke and delete this AS-SET.
+descr: Abuse: abuse@sunoaki.net
+org-handle: SNL-127
+tech-c: SNN17-ARIN
+admin-c: XUBO1-ARIN
+members: AS150289
+members: AS150289:AS-CUST
+source: ARIN

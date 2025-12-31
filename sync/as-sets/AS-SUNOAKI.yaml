@@ -1,0 +1,31 @@
+name: AS-SUNOAKI
+
+source: ARIN
+
+description: |
+  AS-SET for Sunoaki Network LLC
+
+remarks: |
+  Updated by ARIN-IRR-syncer (186.ee/@/ARIN-IRR-syncer).
+
+orgHandle: SNL-127
+
+pocLinks:
+  - handle: SNN17-ARIN
+    function: T
+    description: Tech
+  - handle: XUBO1-ARIN
+    function: AD
+    description: Admin
+
+members:
+  - AS47778
+  - AS47778:AS-SELF:
+    flat: true # means using bgpq4 cli to flatten this set
+    depth: 1 # means the depth of flattening, -1 means infinite depth
+    source: RIPE # means the source of the AS-SET to be flattened (only for the first level, other keep default)
+  - RIPE::AS200536:AS-DOWNSTREAMS-SELF:
+    flat: true
+    depth: 1
+  - AS47778:AS-SUNOAKI:
+    flat: true

@@ -1,0 +1,16 @@
+{
+  "name": "ARIN-IRR-syncer",
+  "version": "1.0.0",
+  "description": "sync IRR data from ARIN & push changes",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "fast-xml-parser": "^5.3.3",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3"
+  }
+}

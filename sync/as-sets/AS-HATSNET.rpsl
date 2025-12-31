@@ -1,0 +1,8 @@
+as-set: AS-HATSNET
+descr: By Hats Network.
+org-handle: SNL-127
+tech-c: SNN17-ARIN
+admin-c: XUBO1-ARIN
+members: AS203314
+members: AS203314:AS-HATS
+source: ARIN
