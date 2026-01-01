@@ -1,0 +1,7 @@
+as-set: AS-SNK
+descr: Yet another AS-SET refers to AS-SUNOAKI.
+org-handle: SNL-127
+tech-c: SNN17-ARIN
+admin-c: XUBO1-ARIN
+members: AS-SUNOAKI
+source: ARIN
