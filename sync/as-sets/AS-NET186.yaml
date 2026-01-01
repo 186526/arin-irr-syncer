@@ -1,0 +1,25 @@
+name: AS-NET186
+
+source: ARIN
+
+description: |
+  To ensure the same content as RIPE::AS-NET186, referral to AS200536:AS-DOWNSTREAMS.
+
+remarks: |
+  Updated by ARIN-IRR-syncer (186.ee/@/ARIN-IRR-syncer).
+
+orgHandle: SNL-127
+
+pocLinks:
+  - handle: SNN17-ARIN
+    function: T
+    description: Tech
+  - handle: XUBO1-ARIN
+    function: AD
+    description: Admin
+
+members:
+  - AS200536
+  - RIPE::AS-NET186:
+    flat: true
+    depth: -1

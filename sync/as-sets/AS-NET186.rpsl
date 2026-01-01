@@ -1,8 +1,0 @@
-as-set: AS-NET186
-descr: To ensure the same content as RIPE::AS-NET186, referral to AS200536:AS-DOWNSTREAMS.
-org-handle: SNL-127
-tech-c: SNN17-ARIN
-admin-c: XUBO1-ARIN
-members: AS200536:AS-DOWNSTREAMS
-members: AS200536
-source: ARIN

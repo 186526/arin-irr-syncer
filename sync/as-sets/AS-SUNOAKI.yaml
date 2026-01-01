@@ -23,9 +23,9 @@ members:
   - AS47778:AS-SELF:
     flat: true # means using bgpq4 cli to flatten this set
     depth: 1 # means the depth of flattening, -1 means infinite depth
-    source: RIPE # means the source of the AS-SET to be flattened (only for the first level, other keep default)
   - RIPE::AS200536:AS-DOWNSTREAMS-SELF:
     flat: true
     depth: 1
+    source: RIPE
   - AS47778:AS-SUNOAKI:
     flat: true
