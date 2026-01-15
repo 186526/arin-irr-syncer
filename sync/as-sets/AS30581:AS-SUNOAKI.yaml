@@ -1,0 +1,23 @@
+name: AS-SUNOAKI
+
+source: ARIN
+
+description: |
+  AS-SET for Sunoaki Network LLC, copy from ARIN::AS-SUNOAKI.
+
+remarks: |
+  Updated by ARIN-IRR-syncer (186.ee/@/ARIN-IRR-syncer).
+
+orgHandle: SNL-127
+
+pocLinks:
+  - handle: SNN17-ARIN
+    function: T
+    description: Tech
+  - handle: XUBO1-ARIN
+    function: AD
+    description: Admin
+
+members:
+  - ARIN::AS-SUNOAKI:
+    flat: true
