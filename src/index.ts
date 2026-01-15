@@ -53,7 +53,10 @@ ASNList.forEach(async (asSet) => {
 	if (equal) {
 		console.log(`No changes for ${asSet.name}, skipping...`);
 	} else {
-		console.log(`Changes detected for ${asSet.name}, updating ARIN Server`);
+		console.log(`Changes detected for ${asSet.name}:`);
+		console.log(`Local Members: ${asSetObj.members}`);
+		console.log(`ARIN Members: ${asSetObjFromARIN.members}`);
+		console.log(`Updating ${asSet.name} on ARIN Server...`);
 		const result = await irm.modify().as_set({
 			ASSetName: asSetObj.name,
 			ASSetContent: asSetObj.toXML(),
