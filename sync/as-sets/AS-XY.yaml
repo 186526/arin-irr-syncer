@@ -1,0 +1,31 @@
+name: AS-XY
+
+source: ARIN
+
+description: |
+  A Sunoaki customer,This AS-SET does not represent Sunoaki Network LLC. We reserve the right to revoke and delete this AS-SET.
+  Abuse: abuse@sunoaki.net
+  Xinyu Net's AS-SET, which is expanded from AS210773:AS-SELF and AS210773:AS-SET
+
+remarks: |
+  Updated by ARIN-IRR-syncer (186.ee/@/ARIN-IRR-syncer).
+
+orgHandle: SNL-127
+
+pocLinks:
+  - handle: SNN17-ARIN
+    function: T
+    description: Tech
+  - handle: XUBO1-ARIN
+    function: AD
+    description: Admin
+
+members:
+  - RIPE::AS210773:AS-SELF:
+    flat: true
+    depth: -1
+    source: RIPE
+  - RIPE::AS210773:AS-SET:
+    flat: true
+    depth: -1
+    source: RIPE
