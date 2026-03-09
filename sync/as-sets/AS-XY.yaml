@@ -24,8 +24,6 @@ members:
   - RIPE::AS210773:AS-SELF:
     flat: true
     depth: -1
-    source: RIPE
   - RIPE::AS210773:AS-SET:
     flat: true
     depth: -1
-    source: RIPE
