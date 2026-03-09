@@ -21,9 +21,9 @@ pocLinks:
     description: Admin
 
 members:
-  - RIPE::AS210773:AS-SELF:
+  - AS210773:AS-SELF:
     flat: true
     depth: -1
-  - RIPE::AS210773:AS-SET:
+  - AS210773:AS-SET:
     flat: true
     depth: -1
